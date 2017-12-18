@@ -71,6 +71,26 @@ def convert_to_vectors(documents, vector_space):
                                                                     vector_space)
     return vectorized_documents
 
+
+'''
+Funcion de prueba para agregar la representacion vectorial con tf-idf
+Ricardo JC
+'''
+
+def convert_to_vectors_for_tf_idf(documents,vector_space):
+    vectorized_documents = {}
+    for cluster in documents:
+        vectorized_documents[cluster] = {}
+        for document_name in documents[cluster]:
+            document = documents[cluster][document_name]
+            vectorized_documents[cluster][document_name]= \
+                                                    get_vector_representation_tf_idf(
+                                                                        document,
+                                                                        documents,
+                                                                        vector_space)
+    return vectorized_documents
+
+
 def get_vector_space_from_clusters(documents):
     token_sets = []
     for cluster in documents.keys():

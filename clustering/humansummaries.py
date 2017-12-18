@@ -1,5 +1,4 @@
 import pickle
-import kmeans
 import duc
 from nltk.cluster import util
 

@@ -5,6 +5,7 @@ import numpy as np
 
 def new_euclidean_distances(X, Y=None, Y_norm_squared=None, squared=False):
     return util.cosine_distance(X,Y)
+    #return util.euclidean_distance(X,Y)
 
 k_means_.euclidean_distances = new_euclidean_distances
 
